@@ -2,7 +2,7 @@ import React from 'react';
 import CalcTitle from './components/calcTitle';
 import OutScreen from './components/outscreen';
 import Buttons from './components/buttons';
-
+import './index.css';
 class Calculator extends React.Component
 {
     constructor()
@@ -53,12 +53,14 @@ class Calculator extends React.Component
     render(){
       return(
         <div className="main_calc">
+          <div className="title">
           <CalcTitle name="React Calculator" />
+          </div>
           <div className="outputScreen">
             <OutScreen question={this.state.question} answer={this.state.answer} />
 
           </div>
-
+          <div className="buttons">
           <div className="row1">
             <Buttons value={'clear'} handleClick={this.handleClick}/>
             <Buttons value={'delete'} handleClick={this.handleClick}/>
@@ -83,10 +85,11 @@ class Calculator extends React.Component
             <Buttons value={'3'} handleClick={this.handleClick}/>
             <Buttons value={'+'} handleClick={this.handleClick}/>
           </div>
-          <div className="row1">
+          <div className="row5">
             <Buttons value={'0'} handleClick={this.handleClick}/>
             <Buttons value={'='} handleClick={this.handleClick}/>
           
+          </div>
           </div>
         </div>
       );
